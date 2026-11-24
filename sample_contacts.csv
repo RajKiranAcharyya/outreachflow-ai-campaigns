@@ -1,0 +1,6 @@
+email,first_name,last_name,company,role,note
+alice.johnson@techscale.io,Alice,Johnson,TechScale,VP of Engineering,Scaling backend microservices
+marcus.chen@dataflow.ai,Marcus,Chen,DataFlow,Head of Product,Interested in LLM automations
+elena.rostova@cloudsphere.co,Elena,Rostova,CloudSphere,Founder & CEO,Recently raised Series A
+david.kim@nexuspay.com,David,Kim,NexusPay,CTO,Focusing on queue reliability and high throughput
+sarah.miller@growthhub.net,Sarah,Miller,GrowthHub,Director of Demand Gen,Running multi-channel outbound

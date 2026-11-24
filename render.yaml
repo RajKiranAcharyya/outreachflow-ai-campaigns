@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: outreachflow-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npx knex migrate:latest --knexfile knexfile.ts && node dist/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DB_PATH
+        value: /var/data/outreachflow.db
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: APP_SECRET
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-1.5-flash
+      - key: WORKER_INTERVAL_MS
+        value: 5000
+      - key: CORS_ORIGIN
+        value: "*"
+    disk:
+      name: sqlite-disk
+      mountPath: /var/data
+      sizeGB: 1
